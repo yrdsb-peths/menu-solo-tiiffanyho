@@ -1,24 +1,34 @@
-public class StackOfStrings{
-    private Node first;
-    private class Node {		// Inner Class
+public class Stack<T> 
+{
+    private Node first = null;
+    
+    private class Node 
+    {        // Inner Class
        private String item;
        private Node next;
     }
-    public boolean isEmpty() {
+    
+    public boolean isEmpty() 
+    {
        return first == null;
     }
-    public void push(String item) {
+    
+    public void push(String item) 
+    {
        Node second = first;
        first = new Node();
        first.item = item;
        first.next = second;
     }
-    public String pop() {
+
+    public String pop() 
+    {
        String item = first.item;
        first = first.next;
        return item;
     }
-    public String peek() {		// What does this do?
+    public String peek() 
+    {
        return first.item;
     }
  }
