@@ -1,24 +1,41 @@
 public class Queue<T> 
 {
     private Node first, last;
-    private class Node{ String item; Node next; }
-    public boolean isEmpty() { return (first == null); }
     
-    public void enqueue(String item) 
+    private class Node
+    { 
+        T item;
+        Node next;
+    }
+    public boolean isEmpty() 
+    {
+        return (first == null); 
+    }
+    
+    public void enqueue(T item) 
     {
         Node oldLast = last;
         last = new Node();
         last.item = item;
         last.next = null;
-        if (isEmpty())  first = last;
-        else            oldLast.next = last;
+        if (isEmpty())
+        {
+            first = last;
+        }
+        else
+        {
+            oldLast.next = last;
+        }
     }
     
-    public String dequeue() 
+    public T dequeue() 
     {
-        String item = first.item;
+        T item = first.item;
         first = first.next;
-        if (isEmpty())  first = last;
+        if (isEmpty())
+        {
+            first = last;
+        }
         return item;
     }
 }
