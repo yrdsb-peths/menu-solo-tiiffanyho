@@ -6,9 +6,9 @@ public class AvatarManager extends Actor {
     public AvatarManager() 
     {
         setImage((GreenfootImage) null);
-        avatars.enqueue(new Avatar("images/face_a.png"));
-        avatars.enqueue(new Avatar("images/face_b.png"));
-        avatars.enqueue(new Avatar("images/face_c.png"));
+        avatars.enqueue(new Avatar("images/Avatar_1.png"));
+        avatars.enqueue(new Avatar("images/Avatar_2.png"));
+        avatars.enqueue(new Avatar("images/Avatar_3.png"));
         current = avatars.dequeue();
         updateDisplay();
     }
