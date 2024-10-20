@@ -27,9 +27,9 @@ public class InstructionScreen extends World
         instruction = new Label("Navigate through the screens with the buttons", 20);
         addObject(instruction, 300, 100);
         
-        addObject(instructionLabel, 250, 200);
+        addObject(instructionLabel, 300, 200);
         
-        addObject(new Button(this::nextScreen), 500, 350);
+        addObject(new Button(this::nextScreen), 500, 300);
         
         addObject(new Button(this::prevScreen), 100, 300);
         
