@@ -50,7 +50,12 @@ public class InstructionScreen extends World
     
     private void prevScreen()
     {
-        if (currentIndex > 0) 
+        if(currentIndex == 0)
+        {
+            Greenfoot.setWorld(home);
+            return;
+        }
+        else
         {
             currentIndex--;
             instructionLabel.setValue(allText[currentIndex]);
