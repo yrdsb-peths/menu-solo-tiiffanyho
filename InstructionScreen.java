@@ -42,11 +42,18 @@ public class InstructionScreen extends World
     
     private void nextScreen()
     {
-        
+        if (currentIndex < allText.length - 1) {
+            currentIndex++;
+            instructionLabel.setValue(allText[currentIndex]);
+        }
     }
     
     private void prevScreen()
     {
-        
+        if (currentIndex > 0) 
+        {
+            currentIndex--;
+            instructionLabel.setValue(allText[currentIndex]);
+        }
     }
 }
