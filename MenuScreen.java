@@ -2,20 +2,33 @@ import greenfoot.*;
 
 public class MenuScreen extends World 
 {
-    private Label instruction;
+    private Label instructionAvatar;
+    private Label highScoreButtonLabel;
+    private Label goNext;
     public MenuScreen() 
     {
         super(600, 400, 1);
-        addObject(new Button(() -> Greenfoot.setWorld(new InstructionScreen(this))), 300, 340);
+        goNext = new Label("Instructions", 20);
+        addObject(goNext, 300, 315);
+        addObject(new Button(() -> goInstructions()), 300, 350);
         
         AvatarManager avatarManager = new AvatarManager();
-        instruction = new Label("Click to change your avatar", 20);
-        addObject(instruction, 300, 160);
         addObject(avatarManager, 300, 100);
+        instructionAvatar = new Label("Click to change your avatar", 20);
+        addObject(instructionAvatar, 300, 160);
+        
+        addObject(new Button(() -> goHighScores()), 300, 275);
+        highScoreButtonLabel = new Label("View High Scores", 20);
+        addObject(highScoreButtonLabel, 300, 240);
     }
     
     public void goInstructions() 
     {
         Greenfoot.setWorld(new InstructionScreen(this));
+    }
+    
+    public void goHighScores() 
+    {
+        Greenfoot.setWorld(new HighScoreScreen(this));
     }
 }
