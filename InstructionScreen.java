@@ -9,11 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class InstructionScreen extends World
 {
     private World home;
-    private String[] allText = { "Instruction 1", "Instruction 2", "Intruction 3" };
+    private String[] allText = { "Instruction 1", "Instruction 2", "Instruction 3" };
     private int currentIndex = 0;
     private Label instructionLabel = new Label(allText[currentIndex], 50);
     private Label instruction;
-
+    private Label goBack;
+    private Label goNext;
     public InstructionScreen(World home)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -25,9 +26,12 @@ public class InstructionScreen extends World
         addObject(instructionLabel, 300, 200);
         
         addObject(new Button(this::nextScreen), 500, 300);
+        goNext = new Label("next", 20);
+        addObject(goNext, 500, 265);
         
         addObject(new Button(this::prevScreen), 100, 300);
-        
+        goBack = new Label("back", 20);
+        addObject(goBack, 100, 265);
     }
     
     private String getInstruction(int index)
