@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class InstructionScreen extends World
 {
     private World home;
-    private String[] allText = { "Screen 0", "Screen 1", "Screen 2" };
+    private String[] allText = { "Instruction 1", "Instruction 2", "Intruction 3" };
     private int currentIndex = 0;
     private Label instructionLabel = new Label(allText[currentIndex], 50);
     private Label instruction;
