@@ -8,11 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class InstructionScreen extends World
 {
-
-    /**
-     * Constructor for objects of class InstructionScreen.
-     * 
-     */
     private World home;
     private String[] allText = { "Screen 0", "Screen 1", "Screen 2" };
     private int currentIndex = 0;
