@@ -9,7 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class InstructionScreen extends World
 {
     private World home;
-    private String[] allText = { "Instruction 1", "Instruction 2", "Instruction 3" };
+    String firstInstruction = "Instruction 1";
+    String secondInstruction = "Instruction 2";
+    String thirdInstruction = "Instruction 3";
+    private String[] allText = { firstInstruction, secondInstruction, thirdInstruction };
     private int currentIndex = 0;
     private Label instructionLabel = new Label(allText[currentIndex], 50);
     private Label instruction;
@@ -23,9 +26,9 @@ public class InstructionScreen extends World
         super(600, 400, 1);
         this.home = home;
         instruction = new Label("Navigate through the screens with the buttons", 20);
-        addObject(instruction, 300, 100);
+        addObject(instruction, 300, 40);
         
-        addObject(instructionLabel, 300, 200);
+        addObject(instructionLabel, 300, 150);
         
         addObject(new Button(this::nextScreen), 500, 300);
         goNext = new Label("next", 20);
