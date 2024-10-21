@@ -15,6 +15,8 @@ public class InstructionScreen extends World
     private Label instruction;
     private Label goBack;
     private Label goNext;
+    private Label backMenuLabel;
+    
     public InstructionScreen(World home)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -32,13 +34,17 @@ public class InstructionScreen extends World
         addObject(new Button(this::prevScreen), 100, 300);
         goBack = new Label("back", 20);
         addObject(goBack, 100, 265);
+        
+        addObject(new Button(this::backMenu), 100, 370);
+        backMenuLabel = new Label("Back to menu", 20);
+        addObject(backMenuLabel, 100, 338);
     }
     
     private String getInstruction(int index)
     {
         return "Screen " + index;
     }
-    
+
     private void nextScreen()
     {
         if (currentIndex < allText.length - 1) {
@@ -59,5 +65,10 @@ public class InstructionScreen extends World
             currentIndex--;
             instructionLabel.setValue(allText[currentIndex]);
         }
+    }
+    
+    private void backMenu()
+    {
+        Greenfoot.setWorld(home);
     }
 }

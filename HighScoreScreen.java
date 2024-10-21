@@ -27,9 +27,9 @@ public class HighScoreScreen extends World
 
     private void backButton()
     {
-        addObject(new Button(() -> back()), 500, 350);
+        addObject(new Button(() -> back()), 100, 370);
         Label backButtonLabel = new Label("Back to menu", 20);
-        addObject(backButtonLabel, 500, 320);
+        addObject(backButtonLabel, 100, 338);
     }
     
     private void displayHighScores()
