@@ -9,6 +9,9 @@ public class AvatarManager extends Actor {
         avatars.enqueue(new Avatar("images/Avatar_1.png"));
         avatars.enqueue(new Avatar("images/Avatar_2.png"));
         avatars.enqueue(new Avatar("images/Avatar_3.png"));
+        avatars.enqueue(new Avatar("images/Avatar_4.png"));
+        avatars.enqueue(new Avatar("images/Avatar_5.png"));
+        avatars.enqueue(new Avatar("images/Avatar_6.png"));
         current = avatars.dequeue();
     }
     
