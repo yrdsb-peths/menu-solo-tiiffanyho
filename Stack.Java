@@ -2,6 +2,7 @@ public class Stack<T>
 {
     private Node first = null;
     private int size = 0;
+    
     public int size() 
     {
         return size;
